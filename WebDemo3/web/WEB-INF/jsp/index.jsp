@@ -16,10 +16,10 @@
 
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-    <!--[if lt IE 9]>
+
     <script src="static/js/html5shiv.min.js"></script>
     <script src="static/js/respond.min.js"></script>
-    <![endif]-->
+
     <style>
         h2{text-align: center;}
         p{text-align: center;}
@@ -53,13 +53,13 @@
     </div>
 </nav>
     <div class="container">
+        <input type="hidden" id="ctx" value="<%=ctxpath%>">
         <div class="panel panel-info">
             <!-- Default panel contents -->
             <div class="panel-heading"><h2>增删改查练习</h2></div>
             <div class="panel-body">
                 <p>这个项目旨在演示初级工程师必须掌握的CURD操作</p>
             </div>
-            <input type="hidden" id="ctx" value="<%=ctxpath%>">
             <%List<Student> students = (List<Student>) request.getAttribute("students");%>
             <table class="table table-bordered">
                 <thead>
