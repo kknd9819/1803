@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>你爱我吗</title>
+    <meta charset="utf-8">
+    <style>
+        #div1 {
+            width: 400px;
+            height: 300px;
+            border: 2px solid green;
+            margin: auto;
+            box-shadow: 10px 10px 5px #888888;
+            border-radius: 8px;
+        }
+
+        .btn {
+            height: 50px;
+            width: 100px;
+            border: 1px solid green;
+            float: left;
+            margin: 120px 60px 0 30px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <h2>你爱我吗?</h2>
+        <div class="btn" id="yes" contenteditable="true">爱你哟</div>
+        <div class="btn" id="no" contenteditable="true">爱你个大头鬼</div>
+    </div>
+    <script>
+        var yes = document.getElementById("yes");
+        yes.onclick = function () {
+            alert("爱是一道光，绿到发亮~");
+        }
+
+        var no = document.getElementById("no");
+
+        no.onclick = function () {
+            alert("bug已出现，请尽快消灭");
+        }
+
+    
+       
+        no.onmouseover = function () {
+            var div1 = document.getElementById("div1");
+            var randomTop = Math.floor(Math.random() * document.body.clientHeight);
+            var randomLeft = Math.floor(Math.random() * document.body.clientWidth / 2);
+            div1.style.marginTop = randomTop + "px";
+            div1.style.marginLeft = randomLeft + "px";
+        }
+    </script>
+</body>
+
+</html>
