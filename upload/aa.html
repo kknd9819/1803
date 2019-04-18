@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<p style='text-align:center'>");
+        for(var i=1;i<=8;i++){ //这个循环决定由多少行
+            for(var j=1;j<=17-2*i;j++){
+                document.write("*"); //每一行输出多少个*
+            }
+            document.write("<br>");
+        }
+        document.write("</p>");
+
+
+        document.write("<br>=======================<br>");
+
+        for(var i=1;i<=5;i++){ //决定输出几行
+            for(var j=1;j<=10;j++){
+                if(i==1 || i==5){
+                    document.write("*");
+                } else {
+                    if(j==1 || j==10){
+                        document.write("*");
+                    } else {
+                        document.write("<span style='color:white'>*</span>");
+                    }
+                }
+                
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
